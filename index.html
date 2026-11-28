@@ -4,8 +4,8 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow,noarchive"><meta name="referrer" content="no-referrer">
   <meta name="theme-color" content="#f5f5f0">
-  <meta name="description" content="Tři návrhy pro MIRKA PR. Poznejte práci Mirky Kreuzerové, otevřete rozhovory u vydavatelů a poslechněte si ukázku On Air.">
-  <title>MIRKA PR · Tři návrhy webu</title>
+  <meta name="description" content="Čtyři návrhy pro MIRKA PR. Poznejte práci Mirky Kreuzerové a prolistujte si její mediální výstupy.">
+  <title>MIRKA PR · Čtyři návrhy webu</title>
   <style>@font-face{font-family:Barlow Condensed;src:url('ui/assets/barlow-condensed.woff2') format('woff2');font-weight:700;font-display:swap}
 :root{--desk:#f4f5f1;--ink:#19241f;--muted:#526059;--line:#c9cec6;--green:#234a3a;--paper:#f3f1e4;--red:#a9281f;--air:#15151e;--lav:#c9b4ff;--sans:"Helvetica Neue",Arial,sans-serif;--serif:Georgia,"Times New Roman",serif;--display:"Barlow Condensed","Arial Narrow",var(--sans);font:100%/1.55 var(--sans);color:var(--ink);background:var(--desk)}
 *,*::before,*::after{box-sizing:border-box}body,h1,h2,h3,p,figure,dl,dd{margin:0}body{min-width:0}a{color:inherit;text-decoration:none}button,summary{cursor:pointer}button,input,textarea{font:inherit;color:inherit}button{background:none}img{display:block;width:100%;height:auto}em{font-family:var(--serif);font-weight:400}svg{width:1.15rem;height:1.15rem;flex:none}.symbols{width:0;height:0;position:absolute}.container{width:min(100% - clamp(2rem,8vw,9rem),83rem);margin-inline:auto}h1,h2,h3{line-height:1.05;letter-spacing:-.045em;text-wrap:balance}h1:focus:not(:focus-visible),[tabindex="-1"]:focus:not(:focus-visible){outline:0}[hidden]{display:none!important}:focus-visible{outline:3px solid #246bbb;outline-offset:5px}.onair :focus-visible,.poster-o:focus-visible{outline-color:#ffe89d}.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.label{font-size:.83rem;line-height:1.3;font-weight:700;letter-spacing:.09em;text-transform:uppercase}.screen{display:none}#navrhy{display:block}.screen:target,.screen:has(:target){display:block}body:has(.screen:not(#navrhy):target,.screen:not(#navrhy) :target) #navrhy{display:none}html.ready .screen,html.ready #navrhy{display:none}html.ready .screen.active,html.ready #navrhy.active{display:block}.preview-nav{display:none}.preview-nav.active,body:not(:has(.ready)):has(.concept:target) .preview-nav{display:block}section[id],footer[id]{scroll-margin-top:3.8rem}
@@ -23,6 +23,285 @@
 @media(max-width:35rem){.press-grid.two{grid-template-columns:1fr}.story-image{aspect-ratio:1.93}.archive-grid .story{display:grid;grid-template-columns:5.8rem 1fr;gap:.9rem;border-bottom:1px solid var(--local-line);padding-bottom:1rem}.archive-grid{grid-template-columns:1fr}.archive-grid .story-image{aspect-ratio:1}.archive-grid .story-copy{padding:0}.archive-grid .story-copy h3{font-size:1.5rem}.archive-grid .story-copy>p:not(.label){font-size:.95rem}.archive-grid .read-link{margin-top:.55rem}.review-cta{font-size:.95rem}.mast>.container{display:block}.mast nav{justify-content:flex-start;gap:1.15rem}.air-hero{display:block;background:#161a29}.air-photo{position:absolute;inset:0 0 0 auto;width:48%;z-index:-1;mask-image:linear-gradient(90deg,transparent,black 45%)}.air-hero-type{max-width:82%;padding:1.35rem 1.1rem 1.5rem}.air-hero-type>p:not(.label){max-width:21ch;text-shadow:0 1px 4px #121420}.air-hero-type .text-link{background:#171b2a;color:#f8f4fc;box-decoration-break:clone}.air-hero-type h1{font-size:clamp(4.2rem,17vw,6rem)}.air-hero-type h2{max-width:13ch}}
 @media(max-width:23rem){.container{width:calc(100% - 1.6rem)}.desk-head nav{gap:.75rem}.desk-head nav a{font-size:.875rem}.fd b{font-size:2rem}.fd{font-size:1rem}.gallery-head h1{font-size:2.8rem}.mag-title{padding-right:4.1rem}.mag-title img{width:3.3rem;height:4.4rem}.case-switch button{padding:.35rem .65rem}.cue h3{font-size:1.6rem}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+.news-preview {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  margin-top: clamp(2.5rem, 5vw, 5rem);
+  background: #dce7df;
+  color: #182822;
+}
+
+.news-preview-photo {
+  position: relative;
+  min-height: 16rem;
+}
+
+.news-preview-photo img {
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-preview-copy {
+  display: grid;
+  align-content: center;
+  padding: clamp(1.4rem, 5vw, 4rem);
+  gap: .75rem;
+}
+
+.news-preview h2 {
+  font: 700 clamp(3rem, 6vw, 6rem)/.87 var(--serif);
+  letter-spacing: -.08em;
+}
+
+.news-preview h2 i { font-weight: 400; }
+.news-preview .open-card { justify-self: start; }
+.news-preview:hover .open-card { text-decoration: underline; }
+
+.newspaper {
+  --news-paper: #f8f7f1;
+  --news-ink: #182822;
+  --news-accent: #285344;
+  --news-rule: #a1aca3;
+  background: var(--news-paper);
+  color: var(--news-ink);
+}
+
+.news-page {
+  width: min(100% - clamp(2rem, 8vw, 8rem), 81rem);
+  margin-inline: auto;
+}
+
+.news-header { padding-top: clamp(.75rem, 2vw, 1.5rem); }
+
+.news-edition {
+  display: flex;
+  justify-content: space-between;
+  gap: .7rem;
+  border-bottom: 1px solid var(--news-rule);
+  padding-bottom: .65rem;
+  font-size: .88rem;
+  font-weight: 700;
+}
+
+.news-edition span { color: var(--news-accent); padding-inline: .2em; }
+
+.news-header h1 {
+  margin: clamp(.8rem, 1.7vw, 1.6rem) 0 clamp(1rem, 2vw, 2rem);
+  font: 700 clamp(3.6rem, 12vw, 11rem)/.92 var(--serif);
+  letter-spacing: -.09em;
+  text-align: center;
+}
+
+.news-header h1 i, .news-lead h2 i, .news-services h2 i {
+  color: var(--news-accent);
+  font-weight: 400;
+}
+
+.news-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 .8rem;
+  border-top: 2px solid var(--news-ink);
+  border-bottom: 1px solid var(--news-rule);
+}
+
+.news-nav > div { display: flex; flex-wrap: wrap; gap: 0 clamp(.75rem, 3vw, 2.3rem); }
+
+.news-nav a, #news-motion-toggle {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+#news-motion-toggle {
+  flex: none;
+  gap: .55rem;
+  border: 0;
+  padding-inline: .2rem;
+}
+
+.news-motion-icon {
+  display: inline-block;
+  width: 1.35rem;
+  height: .8rem;
+  padding: .13rem;
+  border-radius: 1rem;
+  background: #5b665e;
+}
+
+.news-motion-icon::before {
+  content: '';
+  display: block;
+  width: .54rem;
+  height: .54rem;
+  border-radius: 50%;
+  background: #fff;
+}
+
+[aria-pressed="true"] .news-motion-icon { background: var(--news-accent); }
+[aria-pressed="true"] .news-motion-icon::before { margin-left: auto; }
+.news-nav a:hover, #news-motion-toggle:hover { text-decoration: underline; }
+
+.news-front {
+  display: grid;
+  grid-template-columns: minmax(0, 2.3fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3.8rem);
+  padding-block: clamp(1.25rem, 3vw, 2.65rem) clamp(2.75rem, 6vw, 5.5rem);
+}
+
+.news-living { position: relative; isolation: isolate; overflow: hidden; background: #293a31; }
+.news-living img { width: 100%; height: 100%; object-fit: cover; }
+.news-window { aspect-ratio: 1.9; }
+.news-window img { object-position: 50% 50%; }
+.news-rail-story .news-living { aspect-ratio: 1.8; margin: 0 0 1rem; }
+
+.news-living::before, .news-living::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.news-window::before {
+  inset: 12% 54% 20% 0;
+  background: radial-gradient(ellipse 31% 20% at 70% 52%, #ffe6ba, #e8a66680 40%, transparent 80%);
+  mix-blend-mode: screen;
+}
+
+.news-window::after {
+  inset: 40% 56% 17% 0;
+  background: radial-gradient(ellipse 12% 58% at 45% 56%, #ffcf9b9c, transparent 85%);
+  mix-blend-mode: screen;
+}
+
+.news-track::after {
+  inset: -30% -12%;
+  background: linear-gradient(25deg, transparent 42%, #432c29 55%, transparent 74%);
+  mix-blend-mode: multiply;
+}
+
+.news-lab::after {
+  inset: -25%;
+  background: radial-gradient(ellipse 20% 50% at 53% 44%, #c9ffb1b3, transparent 75%);
+  mix-blend-mode: screen;
+}
+
+.news-window { --news-before-animation: news-passing-light 6s ease-in-out infinite; }
+.news-window { --news-after-animation: news-passing-light 6s .24s ease-in-out infinite; }
+.news-track { --news-after-animation: news-track-shadow 7s ease-in-out infinite; }
+.news-lab { --news-after-animation: news-passing-light 8s ease-in-out infinite alternate; }
+
+/* The default follows the system setting. The visitor can opt in on this page. */
+.newspaper.active[data-motion="on"] .news-living::before { animation: var(--news-before-animation, none) !important; }
+.newspaper.active[data-motion="on"] .news-living::after { animation: var(--news-after-animation, none) !important; }
+
+@keyframes news-passing-light {
+  0%, 100% { opacity: 0; transform: translateX(-16%); }
+  25% { opacity: .7; }
+  55% { opacity: .46; }
+  75% { opacity: 0; transform: translateX(25%); }
+}
+
+@keyframes news-track-shadow {
+  0%, 100% { opacity: 0; transform: translateY(-11%); }
+  48% { opacity: .35; transform: translateY(10%); }
+}
+
+.news-living-tag {
+  display: none;
+  position: absolute;
+  bottom: .8rem;
+  left: .8rem;
+  padding: .26rem .65rem;
+  background: #182822;
+  color: #f8f7f1;
+  font-size: .83rem;
+}
+
+.newspaper[data-motion="on"] .news-living-tag { display: block; }
+
+.news-lead figcaption {
+  margin: .4rem 0 1.45rem;
+  color: #475950;
+  font-size: .84rem;
+}
+
+.news-page .label { margin-bottom: .44rem; color: var(--news-accent); }
+.news-lead h2, .news-services h2 { text-wrap: initial; }
+
+.news-lead h2, .news-services h2, .news-briefs h2 {
+  margin: 0 0 .7rem;
+  font: 700 clamp(2.25rem, 4.8vw, 5.25rem)/1.03 var(--serif);
+  letter-spacing: -.064em;
+}
+
+.news-lead > p:not(.label), .news-services p:not(.label) { max-width: 53ch; }
+
+.news-link {
+  display: inline-block;
+  margin-top: .65rem;
+  color: var(--news-accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: .25em;
+}
+
+.news-rail { border-left: 1px solid var(--news-rule); padding-left: clamp(1rem, 2.5vw, 2.25rem); }
+.news-rail h2 { margin-bottom: .85rem; font-size: 1.14rem; letter-spacing: -.01em; }
+.news-rail-story { display: block; }
+.news-rail-story + .news-rail-story { border-top: 1px solid var(--news-rule); margin-top: 1.35rem; padding-top: 1.35rem; }
+
+.news-rail-story h3 {
+  margin-bottom: .5rem;
+  font: 700 clamp(1.45rem, 2.6vw, 2.65rem)/1.08 var(--serif);
+  letter-spacing: -.041em;
+  text-wrap: initial;
+}
+
+.news-rail-story:hover h3 { color: var(--news-accent); }
+
+.news-briefs {
+  padding-block: 1.35rem clamp(2.5rem, 6vw, 5rem);
+  border-top: 2px solid var(--news-ink);
+}
+
+.news-briefs h2 { font-size: clamp(2.1rem, 4vw, 3.7rem); margin-bottom: 1rem; }
+.news-brief-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 2.5rem; }
+.news-brief-grid .news-rail-story { border: 0; margin: 0; padding: 0; }
+
+.news-services {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.5rem clamp(1.5rem, 6vw, 5rem);
+  padding: clamp(1.25rem, 3.5vw, 3rem);
+  background: #dce7df;
+}
+
+.news-services h2 { font-size: clamp(2.15rem, 4vw, 4.5rem); }
+.news-service-steps details { border-bottom: 1px solid var(--news-rule); padding: .75rem 0; }
+.news-service-steps summary { font-weight: 700; }
+.news-service-steps details p { padding-top: .5rem; }
+.newspaper .contact { --local-line: var(--news-rule); margin-top: clamp(2.6rem, 6vw, 5rem); }
+
+@media (max-width: 760px) {
+  .news-preview, .news-front, .news-services { grid-template-columns: 1fr; }
+  .news-preview-photo { min-height: 12.5rem; }
+  .news-rail { border-left: 0; border-top: 1px solid var(--news-rule); padding: 1rem 0 0; }
+  .news-window { aspect-ratio: 1.55; }
+  .news-front { gap: 2.15rem; }
+}
+
+@media (max-width: 480px) {
+  .news-edition { font-size: .78rem; }
+  .news-nav { flex-wrap: wrap; }
+  .news-nav > div { width: 100%; border-bottom: 1px solid var(--news-rule); }
+  .news-brief-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
@@ -37,12 +316,16 @@
 <section class="screen gallery" id="navrhy" aria-labelledby="gallery-title">
   <header class="desk-head"><div class="container"><a class="fd" href="#navrhy" aria-label="FD Studio, návrhy webu"><b>fd.</b> studio</a><nav aria-label="Navigace studia"><a href="#navrhy" aria-current="page">Návrhy</a><a href="#pripominky"><svg aria-hidden="true"><use href="#note"/></svg>Připomínky</a></nav></div></header>
   <div class="container desk-body">
-    <header class="gallery-head"><div><p class="label">Návrhy webu pro MIRKA PR</p><h1 id="gallery-title" tabindex="-1">Tři podoby <em>Mirky.</em></h1></div><p>Jak se má Mirka představit příštímu klientovi? Otevřete si návrh a vyzkoušejte, jak se čte, listuje nebo poslouchá.</p></header>
+    <header class="gallery-head"><div><p class="label">Návrhy webu pro MIRKA PR</p><h1 id="gallery-title" tabindex="-1">Čtyři podoby <em>Mirky.</em></h1></div><p>Jak se má Mirka představit příštímu klientovi? Otevřete si návrh a vyzkoušejte, jak se čte, listuje nebo poslouchá.</p></header>
     <div class="cards">
       <a class="card" href="#vizitka"><div class="poster poster-v"><img src="ui/assets/vizitka.webp" width="512" height="1024" alt=""><div class="poster-text"><small>Public relations</small><span>Mirka<br><i>Kreuzerová.</i></span></div></div><div class="card-heading"><h2>Vizitka</h2><strong>4 900 Kč</strong></div><p>Osobní představení, služby a odkazy až na deset výstupů. Reference na přání vymění studio.</p><span class="open-card">Otevřít Vizitku</span></a>
       <a class="card" href="#magazin"><div class="poster poster-m"><img src="ui/assets/magazin.webp" width="512" height="1024" alt=""><div class="poster-text"><small>MIRKA PR</small><span>Revue<i>.</i></span></div></div><div class="card-heading"><h2>Magazín</h2><strong>9 900 Kč</strong></div><p>Obrazové portfolio jako časopis. Po zaškolení si sama vyměníte fotku, text i odkaz na článek.</p><span class="open-card">Listovat Magazínem</span></a>
       <a class="card" href="#on-air"><div class="poster poster-o"><img src="ui/assets/on-air.webp" width="512" height="1024" alt=""><div class="poster-text"><small>MIRKA PR / Studio</small><span>ON<br><i>AIR</i></span></div></div><div class="card-heading"><h2>On Air</h2><strong>14 900 Kč</strong></div><p>Vše z Magazínu, vlastní přehrávač a archiv s filtry. Určíte hlavní výstup i pořadí ostatních.</p><span class="open-card">Vstoupit do On Air</span></a>
     </div>
+    <a class="news-preview" href="#noviny">
+      <div class="news-preview-photo"><img src="ui/assets/newsroom.webp" width="1440" height="811" loading="lazy" alt=""></div>
+      <div class="news-preview-copy"><p class="label">Čtvrtý návrh · Noviny</p><h2>Mezi <i>řádky.</i></h2><p>Digitální noviny s vlastní titulní stranou a pohyblivými fotografiemi. Rozsah a cena podle počtu scén.</p><span class="open-card">Otevřít noviny</span></div>
+    </a>
     <div class="desk-foot"><p>Vzhled a funkce můžete kombinovat. Ceny jsou jednorázové, bez DPH.</p><a href="#pripominky">Zapsat výběr a připomínky</a></div>
   </div>
 </section>
@@ -89,6 +372,79 @@
   </div>
 </article>
 
+<article class="screen concept newspaper" id="noviny" aria-labelledby="noviny-title">
+  <div class="news-page">
+    <header class="news-header">
+      <div class="news-edition"><p>MIRKA PR <span> / </span> Mediální portfolio</p><p>Praha <span> · </span> Ukázkové vydání</p></div>
+      <h1 id="noviny-title" tabindex="-1">Mezi <i>řádky.</i></h1>
+      <nav class="news-nav" aria-label="Navigace novin">
+        <div><a href="#noviny-vystupy">Výběr z médií</a><a href="#noviny-sluzby">Jak vzniká námět</a><a href="#noviny-kontakt">Kontakt</a></div>
+        <button id="news-motion-toggle" type="button" aria-pressed="true" hidden><span class="news-motion-icon" aria-hidden="true"></span>Pohyb fotografií</button>
+      </nav>
+    </header>
+
+    <div class="news-front">
+      <section class="news-lead" aria-labelledby="news-main-headline">
+        <figure>
+          <div class="news-living news-window">
+            <img src="ui/assets/newsroom.webp" width="1440" height="811" alt="Večerní rozhovor v kavárně u okna, za kterým projíždí tramvaj.">
+            <span class="news-living-tag">Pohyblivá fotografie</span>
+          </div>
+          <figcaption>Ilustrace · rozhovor mimo redakci</figcaption>
+        </figure>
+        <p class="label">Od námětu k rozhovoru</p>
+        <h2 id="news-main-headline">Co z vašeho tématu zajímá <i>čtenáře?</i></h2>
+        <p>Mirka Kreuzerová pomáhá firmám a odborníkům najít námět pro média, připravit podklady pro redakci a zvládnout rozhovor vlastními slovy.</p>
+        <a class="news-link" href="#noviny-sluzby">Jak připravit námět pro redakci</a>
+      </section>
+
+      <section class="news-rail" id="noviny-vystupy" aria-labelledby="news-rail-title">
+        <h2 id="news-rail-title">Výběr z médií</h2>
+        <a class="news-rail-story" href="https://www.marianne.cz/rozhovory/marcela-joglova-olympijska-bezkyne-radi-zenam-kondice-3b2fc" target="_blank" rel="noopener noreferrer">
+          <div class="news-living news-track"><img src="ui/assets/beh.webp" width="625" height="625" alt="" loading="lazy"></div>
+          <p class="label">Marianne · Rozhovor</p><h3>Z olympiády do běžného týdne</h3>
+          <p>Marcela Joglová o tom, jak po čtyřicítce začít s pohybem a vydržet u něj.</p>
+          <span class="news-link">Číst v Marianne</span>
+        </a>
+        <a class="news-rail-story" href="https://archiv.hn.cz/c1-67951780-ai-neni-bublina-zmeni-vsechno-rika-sef-bizmachine-ktery-prednasel-v-nasa-a-dnes-uci-firmy-pracovat-s-daty" target="_blank" rel="noopener noreferrer">
+          <p class="label">Hospodářské noviny · Rozhovor</p><h3>Co firmy přehlížejí ve vlastních datech?</h3>
+          <p>Zakladatel BizMachine Martin Ondáš o datech a umělé inteligenci.</p>
+          <span class="news-link">Číst v HN</span>
+        </a>
+      </section>
+    </div>
+
+    <section class="news-briefs" aria-labelledby="news-briefs-title">
+      <h2 id="news-briefs-title">K poslechu a čtení</h2>
+      <div class="news-brief-grid">
+        <a class="news-rail-story" href="https://podcasty.hn.cz/c1-67772870-mikrobiom-jako-motor-dlouhovekosti-jeden-druh-potravin-ho-cilene-nici-pomoci-nemusi-ani-probiotika" target="_blank" rel="noopener noreferrer">
+          <div class="news-living news-lab"><img src="ui/assets/lab.webp" width="625" height="625" alt="" loading="lazy"></div>
+          <p class="label">Longevity · HN · Podcast</p><h3>Co víme o mikrobiomu?</h3>
+          <p>Mikrobiolog Petr Ryšávka v podcastu o vlivu střevních bakterií na zdraví.</p>
+          <span class="news-link">Poslechnout u HN</span>
+        </a>
+        <a class="news-rail-story" href="https://www.hrot24.cz/clanek/cizinci-ceske-tovarny-pokuty-vypadky-vyroby-HNqNY" target="_blank" rel="noopener noreferrer">
+          <div class="news-living"><img src="ui/assets/tovarna.webp" width="625" height="625" alt="" loading="lazy"></div>
+          <p class="label">Hrot24 · Článek</p><h3>Když na směnu chybějí lidé</h3>
+          <p>Jakub Čapek o zahraničních pracovnících a každodenním provozu českých továren.</p>
+          <span class="news-link">Číst v Hrotu</span>
+        </a>
+      </div>
+      <p class="credit">Fotografie jsou ilustrační. Texty a podcast se otevřou u původních vydavatelů.</p>
+    </section>
+
+    <section class="news-services" id="noviny-sluzby" aria-labelledby="news-services-title">
+      <div><p class="label">Ze zákulisí PR</p><h2 id="news-services-title">Z tiskové zprávy <i>k reportáži.</i></h2><p>Otevření nové dílny je zpráva. Reportáž začne ve chvíli, kdy má redaktor co vidět, koho se ptát a proč to jeho čtenáře zajímá.</p></div>
+      <div class="news-service-steps">
+        <details><summary>Jak najdeme konkrétní příběh?</summary><p>Zeptáme se, co může novinář v dílně vidět. Třeba jak knihařka zachraňuje ručně psané poznámky ve staré rodinné kuchařce.</p></details>
+        <details><summary>Co dostane redakce?</summary><p>Krátký námět, ověřitelná fakta, kontakt na člověka z praxe a informaci, kdy může přijít fotograf nebo štáb.</p></details>
+        <details><summary>Jak připravíme člověka na rozhovor?</summary><p>Společně projdeme možné otázky a zkusíme si první odpověď nahlas. Pomáhá začít jednou konkrétní situací, kterou mluvčí sám zažil.</p></details>
+      </div>
+    </section>
+    <footer class="contact" id="noviny-kontakt"><div><p class="label">Tým MIRKA PR</p><h2>Co se chystá <em>u vás?</em></h2><p>Mirka Kreuzerová s vámi probere téma a vybere médium. S Terezou Chábkovou, která se stará o provoz, domluvíte termíny a předání podkladů.</p><a class="text-link" href="https://cz.linkedin.com/in/mirka-kreuzerova/cs" target="_blank" rel="noopener noreferrer">Kontaktovat Mirku na LinkedIn</a></div><details class="contact-brief"><summary>Připravit si zprávu pro Mirku</summary><form class="brief-form"><label for="noviny-tema">Co chcete dostat do médií?</label><textarea id="noviny-tema" rows="3" required placeholder="Chystáme…"></textarea><label for="noviny-termin">Pro koho a kdy</label><input id="noviny-termin" placeholder="Publikum a přibližný termín"><button type="submit" class="button">Zkopírovat zprávu</button><p class="status" role="status"></p></form></details></footer>
+  </div>
+</article>
+
 <section class="screen feedback" id="pripominky" aria-labelledby="feedback-title">
   <header class="desk-head"><div class="container"><a class="fd" href="#navrhy" aria-label="FD Studio, návrhy webu"><b>fd.</b> studio</a><nav aria-label="Navigace studia"><a href="#navrhy">Návrhy</a><a href="#pripominky" aria-current="page"><svg aria-hidden="true"><use href="#note"/></svg>Připomínky</a></nav></div></header>
   <div class="container review-body"><div class="review-lead"><p class="label">FD Studio · Zpětná vazba k návrhům</p><h1 id="feedback-title" tabindex="-1">Vaše <em>připomínky.</em></h1><p>Líbí se vám obálka Magazínu a přehrávač z On Air? Napište to do společného dokumentu přímo k otázkám. Stačí i jedna poznámka, dokument ji při psaní uloží.</p><a class="review-cta button" href="https://docs.google.com/document/d/1mI4gH4fUDl91IBlGwrFLtawPWtXeLKvGYDt9s5MYkwA/edit#heading=h.jz3pydngjoi6" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#note"/></svg>Otevřít společné připomínky</a><p class="credit">Použijte účet Google, na který vám přišla nabídka.</p><a class="text-link" href="#navrhy">Zpět na návrhy</a></div><div class="review-more">
@@ -98,7 +454,7 @@
 </section></main>
 <script>'use strict';
 const screens = [...document.querySelectorAll('.screen')];
-const concepts = {vizitka:'Vizitka', magazin:'Magazín', 'on-air':'On Air'};
+const concepts = {vizitka:'Vizitka', magazin:'Magazín', 'on-air':'On Air', noviny:'Mezi řádky'};
 const legacy = {top:'navrhy', ukazka:'navrhy', vyber:'pripominky', rozsah:'pripominky', portfolio:'magazin-vystupy', rozhovor:'magazin-vystupy', tym:'vizitka-kontakt', kontakt:'pripominky', 'vizitka-postup':'vizitka-sluzby', 'magazin-vydani':'magazin-vystupy'};
 const studioBar = document.querySelector('.preview-nav');
 const audio = document.querySelector('#sound');
@@ -124,7 +480,7 @@ function renderRoute(raw, moveFocus) {
     for (const screen of screens) screen.classList.toggle('active', screen === selected);
     studioBar.classList.toggle('active', !!concepts[selected.id]);
     document.querySelector('#variant-name').textContent = concepts[selected.id] || '';
-    document.title = (concepts[selected.id] || (selected.id === 'pripominky' ? 'Vaše připomínky' : 'Tři návrhy webu')) + ' · MIRKA PR';
+    document.title = (concepts[selected.id] || (selected.id === 'pripominky' ? 'Vaše připomínky' : 'Čtyři návrhy webu')) + ' · MIRKA PR';
     activeScreen = selected;
     document.documentElement.classList.add('ready');
     if (moveFocus) {
@@ -155,6 +511,23 @@ window.addEventListener('hashchange', () => renderRoute(getRoute(),true));
 window.addEventListener('popstate', () => renderRoute(getRoute(),true));
 window.addEventListener('pagehide', () => audio.pause());
 renderRoute(getRoute(), false);
+
+const newspaper = document.querySelector('.newspaper');
+const motionToggle = document.querySelector('#news-motion-toggle');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+let motionChoice;
+function updateNewsMotion() {
+  const enabled = motionChoice ?? !reducedMotion.matches;
+  newspaper.dataset.motion = enabled ? 'on' : 'off';
+  motionToggle.setAttribute('aria-pressed', String(enabled));
+}
+motionToggle.addEventListener('click', () => {
+  motionChoice = newspaper.dataset.motion !== 'on';
+  updateNewsMotion();
+});
+reducedMotion.addEventListener('change', updateNewsMotion);
+updateNewsMotion();
+motionToggle.hidden = false;
 
 const cases = document.querySelector('.case-switch');
 function selectCase(key) {
